@@ -30,7 +30,7 @@ output:
     includes:
       in_header: _includes/google_analytics.html
       after_body: _includes/disqus.html
-github-repo: /kotamine/piecemealR
+github-repo: /kotamine/excel_shiny
 # runtime: shiny
 # rmarkdown::render('excel_shiny.Rmd', output_file='excel_shiny.html')
 # render_book('excel_shiny.Rmd', "bookdown::gitbook", output_dir = "docs", output_options = list(split_by ="chapter"))
