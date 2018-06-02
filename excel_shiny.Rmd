@@ -34,7 +34,7 @@ output:
 # render_book('excel_shiny.Rmd', "bookdown::gitbook", output_dir = "docs", output_options = list(split_by ="chapter"))
 ---
 
-# Introduction 
+# Introduction {#index}
 
 Agricultural educators and extension researchers developing decision-making tools for farmers have long embraced spreadsheet environments like **Microsoft Excel**. Spreadsheet tools can be useful to assist farmers in financial planning, returns on investment, cost-benefit analysis, production, and market risk assessment etc. To some audiences, unfortunately, *spreadsheet tools can be intimidating or difficult to navigate.*  One way to address this issue is to **convert spreadsheet tools into interactive, online applications for increased accessibility and user experience,** especially through utilizing state-of-the-art user-interface designs, data analytics presentations, and interactive features.
 
