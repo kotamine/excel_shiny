@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Excel Tool to R-Shiny App</title>
+  <meta name="description" content="Excel Tool to R-Shiny App">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Excel Tool to R-Shiny App" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Excel Tool to R-Shiny App" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="calculations-in-r.html">
+<link rel="next" href="tips-from-excel-tool-to-shiny.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Excel Tool to R-Shiny App</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#overview"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#objectives"><i class="fa fa-check"></i>Objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="calculations-in-r.html"><a href="calculations-in-r.html"><i class="fa fa-check"></i><b>2</b> Calculations in R</a><ul>
+<li class="chapter" data-level="" data-path="calculations-in-r.html"><a href="calculations-in-r.html#inputs"><i class="fa fa-check"></i>Inputs</a></li>
+<li class="chapter" data-level="" data-path="calculations-in-r.html"><a href="calculations-in-r.html#calculations"><i class="fa fa-check"></i>Calculations</a></li>
+<li class="chapter" data-level="" data-path="calculations-in-r.html"><a href="calculations-in-r.html#outputs"><i class="fa fa-check"></i>Outputs</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html"><i class="fa fa-check"></i><b>3</b> Translating R codes into Shiny</a><ul>
+<li class="chapter" data-level="3.1" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#ui-and-server"><i class="fa fa-check"></i><b>3.1</b> UI and Server</a><ul>
+<li class="chapter" data-level="" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#ui-codes"><i class="fa fa-check"></i>UI codes</a></li>
+<li class="chapter" data-level="" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#server-logic-codes"><i class="fa fa-check"></i>Server Logic codes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#reactivity"><i class="fa fa-check"></i><b>3.2</b> Reactivity</a></li>
+<li class="chapter" data-level="3.3" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#inputs-1"><i class="fa fa-check"></i><b>3.3</b> Inputs</a></li>
+<li class="chapter" data-level="3.4" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#outputs-1"><i class="fa fa-check"></i><b>3.4</b> Outputs</a><ul>
+<li><a href="translating-r-codes-into-shiny.html#interactive-datatables-via-dt">Interactive datatables via <a href="https://rstudio.github.io/DT/">DT</a></a></li>
+<li><a href="translating-r-codes-into-shiny.html#figures-generated-by-ggplot2">Figures generated by <a href="http://ggplot2.tidyverse.org/">ggplot2</a></a></li>
+<li><a href="translating-r-codes-into-shiny.html#html-widgets"><a href="https://www.htmlwidgets.org/showcase_leaflet.html">HTML widgets</a></a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#layout"><i class="fa fa-check"></i><b>3.5</b> Layout</a><ul>
+<li class="chapter" data-level="" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#sidebar-layout"><i class="fa fa-check"></i>Sidebar layout</a></li>
+<li class="chapter" data-level="" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#navigation-bar-layout"><i class="fa fa-check"></i>Navigation bar layout</a></li>
+<li class="chapter" data-level="" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#dashboard-layout"><i class="fa fa-check"></i>Dashboard layout</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#deploy-as-online-application"><i class="fa fa-check"></i><b>3.6</b> Deploy as Online Application</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="tips-from-excel-tool-to-shiny.html"><a href="tips-from-excel-tool-to-shiny.html"><i class="fa fa-check"></i><b>4</b> Tips: from Excel tool to Shiny</a><ul>
+<li class="chapter" data-level="4.1" data-path="tips-from-excel-tool-to-shiny.html"><a href="tips-from-excel-tool-to-shiny.html#excel-like-functions"><i class="fa fa-check"></i><b>4.1</b> Excel-like functions</a></li>
+<li class="chapter" data-level="4.2" data-path="tips-from-excel-tool-to-shiny.html"><a href="tips-from-excel-tool-to-shiny.html#read-variables-from-csv-file"><i class="fa fa-check"></i><b>4.2</b> Read Variables from csv file</a></li>
+<li class="chapter" data-level="4.3" data-path="tips-from-excel-tool-to-shiny.html"><a href="tips-from-excel-tool-to-shiny.html#multiple-scenarios-in-columns"><i class="fa fa-check"></i><b>4.3</b> Multiple Scenarios in Columns</a></li>
+<li class="chapter" data-level="4.4" data-path="tips-from-excel-tool-to-shiny.html"><a href="tips-from-excel-tool-to-shiny.html#generating-a-report"><i class="fa fa-check"></i><b>4.4</b> Generating a Report</a></li>
+<li class="chapter" data-level="4.5" data-path="tips-from-excel-tool-to-shiny.html"><a href="tips-from-excel-tool-to-shiny.html#login-via-gmail"><i class="fa fa-check"></i><b>4.5</b> Login via Gmail</a></li>
+<li class="chapter" data-level="4.6" data-path="tips-from-excel-tool-to-shiny.html"><a href="tips-from-excel-tool-to-shiny.html#cloud-database-via-mongodb"><i class="fa fa-check"></i><b>4.6</b> Cloud database via MongoDB</a></li>
+<li class="chapter" data-level="4.7" data-path="tips-from-excel-tool-to-shiny.html"><a href="tips-from-excel-tool-to-shiny.html#google-analytics"><i class="fa fa-check"></i><b>4.7</b> Google Analytics</a></li>
+<li class="chapter" data-level="4.8" data-path="tips-from-excel-tool-to-shiny.html"><a href="tips-from-excel-tool-to-shiny.html#custom-layout-colors-and-html-modifications"><i class="fa fa-check"></i><b>4.8</b> Custom Layout, Colors, and HTML modifications</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="our-project-examples.html"><a href="our-project-examples.html"><i class="fa fa-check"></i><b>5</b> Our project examples</a><ul>
+<li class="chapter" data-level="5.1" data-path="our-project-examples.html"><a href="our-project-examples.html#automatic-calf-feeder"><i class="fa fa-check"></i><b>5.1</b> Automatic Calf Feeder</a></li>
+<li class="chapter" data-level="5.2" data-path="our-project-examples.html"><a href="our-project-examples.html#milking-robot-vs-parlor"><i class="fa fa-check"></i><b>5.2</b> Milking Robot vs Parlor</a></li>
+<li class="chapter" data-level="5.3" data-path="our-project-examples.html"><a href="our-project-examples.html#dairy-visual-benchmark"><i class="fa fa-check"></i><b>5.3</b> Dairy Visual Benchmark</a></li>
+<li class="chapter" data-level="5.4" data-path="our-project-examples.html"><a href="our-project-examples.html#dairy-geography"><i class="fa fa-check"></i><b>5.4</b> Dairy Geography</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="more-on-r-coding-and-tutorials.html"><a href="more-on-r-coding-and-tutorials.html"><i class="fa fa-check"></i><b>6</b> More on R coding and tutorials</a><ul>
+<li class="chapter" data-level="" data-path="more-on-r-coding-and-tutorials.html"><a href="more-on-r-coding-and-tutorials.html#shiny-examples"><i class="fa fa-check"></i>Shiny Examples</a></li>
+<li class="chapter" data-level="" data-path="more-on-r-coding-and-tutorials.html"><a href="more-on-r-coding-and-tutorials.html#shiny-resources"><i class="fa fa-check"></i>Shiny Resources</a></li>
+<li class="chapter" data-level="" data-path="more-on-r-coding-and-tutorials.html"><a href="more-on-r-coding-and-tutorials.html#r-resources"><i class="fa fa-check"></i>R Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="contact.html"><a href="contact.html"><i class="fa fa-check"></i><b>7</b> Contact</a><ul>
+<li class="chapter" data-level="" data-path="contact.html"><a href="contact.html#kota-minegishi"><i class="fa fa-check"></i>Kota Minegishi</a></li>
+<li class="chapter" data-level="" data-path="contact.html"><a href="contact.html#johnathan-nault"><i class="fa fa-check"></i>Johnathan Nault</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org/yihui/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Excel Tool to R-Shiny App</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="translating-r-codes-into-shiny" class="section level1">
+<h1><span class="header-section-number">3</span> Translating R codes into Shiny</h1>
+<div id="ui-and-server" class="section level2">
+<h2><span class="header-section-number">3.1</span> UI and Server</h2>
+<p>We will put the 3 inputs and 3 outputs above into an interactive Shiny app. Here, we create an <strong>User Interface (UI)</strong> object named as “my_ui” and a <strong>Server Logic</strong> object named as “my_server” and pass them into function <code>shinyApp()</code>. You can run this in <code>R</code> or <code>Rstudio</code> or deploy it as an online application.</p>
+<div id="ui-codes" class="section level3 unnumbered">
+<h3>UI codes</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># also saved in &#39;minimum_example1.R&#39; </span>
+
+<span class="co"># load shiny package </span>
+<span class="kw">library</span>(shiny)
+
+my_ui &lt;-<span class="st"> </span>
+<span class="st">  </span><span class="kw">fluidPage</span>( 
+    <span class="kw">h2</span>(<span class="st">&quot;How many calves can be fed by calf feeders per year?&quot;</span>),
+    <span class="kw">h3</span>(<span class="st">&quot;Enter your inputs&quot;</span>),
+    
+    <span class="co"># define inputs</span>
+    <span class="co"># numericInput(inputId, label, value, min, max, step, width)</span>
+    <span class="kw">numericInput</span>(<span class="dt">inputId=</span> <span class="st">&quot;num_feeders&quot;</span>, <span class="dt">label=</span><span class="st">&quot;Number of Feeders&quot;</span>, <span class="dt">value =</span> <span class="dv">2</span>), 
+    <span class="kw">numericInput</span>(<span class="dt">inputId=</span><span class="st">&quot;num_calves&quot;</span>, <span class="dt">label=</span><span class="st">&quot;Number of Calves&quot;</span>, <span class="dt">value =</span> <span class="dv">30</span>), 
+    <span class="kw">numericInput</span>(<span class="dt">inputId=</span><span class="st">&quot;days_on_feeder&quot;</span>, <span class="dt">label=</span><span class="st">&quot;Days on Feeder&quot;</span>, <span class="dt">value =</span> <span class="dv">60</span>),
+    <span class="kw">br</span>(), <span class="kw">br</span>(), 
+    
+    <span class="co"># define outputs   </span>
+    <span class="kw">h3</span>(<span class="st">&quot;Results&quot;</span>), 
+    <span class="kw">h4</span>(<span class="st">&quot;Total number of calves that can be fed in a given point of time&quot;</span>), 
+    <span class="kw">verbatimTextOutput</span>(<span class="st">&quot;calves_total&quot;</span>),  
+    <span class="kw">h4</span>(<span class="st">&quot;Groups of calves that can be turned over a year&quot;</span>),
+    <span class="kw">textOutput</span>(<span class="st">&quot;group_turns&quot;</span>), 
+    <span class="kw">h4</span>(<span class="st">&quot;Calves that can be fed per year &quot;</span>),
+    <span class="kw">uiOutput</span>(<span class="st">&quot;calves_yr&quot;</span>)
+  )</code></pre></div>
+<div id="notes-on-ui" class="section level4 unnumbered">
+<h4>Notes on UI</h4>
+<ul>
+<li><code>fluidPage()</code>: function to define an UI for shiny app</li>
+<li>To define inputs, we use <code>numericInput()</code></li>
+<li>To define outputs, we use three different output types via
+<ul>
+<li><code>verbatimTextOutput()</code>: show a R object as-is</li>
+<li><code>textOutput()</code>: show a text object</li>
+<li><code>uiOutput()</code>: show a User-Interface object such as HTML code</li>
+</ul></li>
+<li><code>h2()</code>,<code>h3()</code>, <code>h4()</code> are HTML tag functions with varying header levels</li>
+<li><code>br()</code> is a HTML tag for line change/spacing</li>
+</ul>
+</div>
+</div>
+<div id="server-logic-codes" class="section level3 unnumbered">
+<h3>Server Logic codes</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># continued from above codes</span>
+
+my_server &lt;-<span class="st"> </span>
+<span class="st">  </span><span class="cf">function</span>(input, output) {
+    <span class="co"># calculate and store variables as reactive objects </span>
+    calves_total &lt;-<span class="st"> </span><span class="kw">reactive</span>({ input<span class="op">$</span>num_feeders <span class="op">*</span><span class="st"> </span>input<span class="op">$</span>num_calves })
+    group_turns &lt;-<span class="st"> </span><span class="kw">reactive</span>({ <span class="dv">365</span><span class="op">/</span>input<span class="op">$</span>days_on_feeder })
+    
+    <span class="co"># render calculated results as outputs </span>
+    output<span class="op">$</span>calves_total &lt;-<span class="st"> </span><span class="kw">renderPrint</span>(<span class="kw">calves_total</span>())
+    output<span class="op">$</span>group_turns &lt;-<span class="st">  </span><span class="kw">renderText</span>(<span class="kw">group_turns</span>())
+    output<span class="op">$</span>calves_yr &lt;-<span class="st">  </span><span class="kw">renderUI</span>(<span class="kw">h4</span>(<span class="kw">round</span>(<span class="kw">calves_total</span>() <span class="op">*</span><span class="st"> </span><span class="kw">group_turns</span>())))
+  }
+
+<span class="kw">shinyApp</span>(my_ui, my_server)</code></pre></div>
+<div id="notes-on-server" class="section level4 unnumbered">
+<h4>Notes on Server</h4>
+<ul>
+<li>Shiny server logic is a <strong>function</strong> to define relationships between <strong>input</strong> and <strong>output</strong> objects (also this often includes a <strong>session</strong> object).</li>
+<li><strong>input</strong> items are accessed by <strong>input$</strong><em>input_item_name</em></li>
+<li><strong>output</strong> items are defined by <strong>output$</strong><em>output_item_name</em></li>
+<li><strong>session</strong> creates a specific instance of the application for each user</li>
+<li><code>reactive({})</code>: function to create a reactive object with respect to <strong>input</strong> contents</li>
+<li><code>{ }</code> brackets are used in R to bundle multiple evaluation lines (called <em>expression</em>)</li>
+<li>To render outputs, we use the corresponding types of rendering functions
+<ul>
+<li><code>rendrPrint()</code></li>
+<li><code>renderText()</code></li>
+<li><code>renderUI()</code></li>
+</ul></li>
+</ul>
+<p><a href="https://kotamine.shinyapps.io/excel_Shiny_minimum_example/">Live app is here.</a></p>
+<p>Here is a screen shot. <img src="img/Screen1.png" /></p>
+</div>
+</div>
+</div>
+<div id="reactivity" class="section level2">
+<h2><span class="header-section-number">3.2</span> Reactivity</h2>
+<p><strong>Reactivity</strong> makes an online application interactive. As the user changes inputs, the server can return updated calculation results.</p>
+<ul>
+<li>For most purposes, it suffices to think</li>
+<li><strong>input</strong> as a source of trigger for reactivity</li>
+<li><strong>ouput</strong> as an endpoint of the reaction</li>
+<li>Learn more: <a href="https://shiny.rstudio.com/articles/reactivity-overview.html">reactivity-overview</a></li>
+</ul>
+<p>In the above example, if a user changes the value of <code>input$num_feeders</code>, this sends a signal to update all <strong>output</strong> items (visible on the webpage) that are connected to <code>input$num_feeders</code>. This updates <code>calves_total</code>, which then updates <code>output$calves_total</code> and <code>output$calves_yr</code>.</p>
+<ul>
+<li>Another common way to trigger reactivity is via</li>
+<li><code>observe({...})</code>: react to changes in any <strong>input</strong><em>$inpute_item</em> in …<br />
+</li>
+<li><code>observeEvent(input$input_trigger, {...})</code>: react to changes in <strong>input</strong><em>$input_trigger</em></li>
+</ul>
+<p>For example, the above example can be modified, so that it only reacts when a button named “Update” is pressed.</p>
+<ul>
+<li>Notes on this modification</li>
+<li><code>reactiveValues()</code>: creates a reactive value object (list)</li>
+<li>inside <code>observeEvent()</code>, reactive updates are specified</li>
+<li>reactive values are accessed for rendering by <em>reactivevlaues_object$item_name</em></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># also saved in &#39;minimum_example2.R&#39; </span>
+
+my_server &lt;-<span class="st"> </span>
+<span class="st">  </span><span class="cf">function</span>(input, output) {
+    
+    <span class="co"># define a object (list) for reactive values </span>
+    rv &lt;-<span class="st"> </span><span class="kw">reactiveValues</span>(<span class="dt">calves_total =</span> <span class="ot">NA</span>, <span class="dt">group_turns =</span><span class="ot">NA</span>)
+    
+    <span class="co"># when input$update is pressed </span>
+    <span class="co"># calculate and store variables as reactive objects  </span>
+    <span class="kw">observeEvent</span>(input<span class="op">$</span>update, {
+      rv<span class="op">$</span>calves_total &lt;-<span class="st"> </span>input<span class="op">$</span>num_feeders <span class="op">*</span><span class="st"> </span>input<span class="op">$</span>num_calves
+      rv<span class="op">$</span>group_turns &lt;-<span class="st">  </span><span class="dv">365</span><span class="op">/</span>input<span class="op">$</span>days_on_feeder
+    })
+    
+    <span class="co"># render calculated results as outputs </span>
+    output<span class="op">$</span>calves_total &lt;-<span class="st"> </span><span class="kw">renderPrint</span>(rv<span class="op">$</span>calves_total)
+    output<span class="op">$</span>group_turns &lt;-<span class="st">  </span><span class="kw">renderText</span>(rv<span class="op">$</span>group_turns)
+    output<span class="op">$</span>calves_yr &lt;-<span class="st">  </span><span class="kw">renderUI</span>(<span class="kw">h4</span>(<span class="kw">round</span>(rv<span class="op">$</span>calves_total <span class="op">*</span><span class="st"> </span>rv<span class="op">$</span>group_turns)))
+  }</code></pre></div>
+</div>
+<div id="inputs-1" class="section level2">
+<h2><span class="header-section-number">3.3</span> Inputs</h2>
+<ul>
+<li>Input types included in <code>shiny</code> package, for example<br />
+</li>
+<li><code>numericInput()</code></li>
+<li><code>actionButton()</code></li>
+<li><code>checkboxInput()</code></li>
+<li><code>dateInput()</code></li>
+<li><code>selectInput()</code></li>
+</ul>
+<div class="figure">
+<img src="img/input_types.png" />
+
+</div>
+</div>
+<div id="outputs-1" class="section level2">
+<h2><span class="header-section-number">3.4</span> Outputs</h2>
+<ul>
+<li>Output types and associated rendering functions included in <code>shiny</code> package, for example<br />
+<img src="img/output_types.png" /></li>
+</ul>
+<p>There are a variety of ways to include tables, figures, and interactive HTML objects. Here are some examples;</p>
+<div id="interactive-datatables-via-dt" class="section level3 unnumbered">
+<h3>Interactive datatables via <a href="https://rstudio.github.io/DT/">DT</a></h3>
+<div class="figure">
+<img src="img/DT_example.png" />
+
+</div>
+</div>
+<div id="figures-generated-by-ggplot2" class="section level3 unnumbered">
+<h3>Figures generated by <a href="http://ggplot2.tidyverse.org/">ggplot2</a></h3>
+<div class="figure">
+<img src="img/output_ggplot2.png" />
+
+</div>
+</div>
+<div id="html-widgets" class="section level3 unnumbered">
+<h3><a href="https://www.htmlwidgets.org/showcase_leaflet.html">HTML widgets</a></h3>
+<p>Various HTML widgets can be integrated in Shiny apps. Here is an example; <img src="img/HTML_widgets.png" /></p>
+</div>
+</div>
+<div id="layout" class="section level2">
+<h2><span class="header-section-number">3.5</span> Layout</h2>
+<p>Once you have <strong>input</strong> and <strong>output</strong>, you can arrange them in any way. Typical layout templates include the following;</p>
+<div id="sidebar-layout" class="section level3 unnumbered">
+<h3>Sidebar layout</h3>
+<div class="figure">
+<img src="img/sidebar_layout.png" />
+
+</div>
+</div>
+<div id="navigation-bar-layout" class="section level3 unnumbered">
+<h3>Navigation bar layout</h3>
+<div class="figure">
+<img src="img/navbar_layout.png" />
+
+</div>
+</div>
+<div id="dashboard-layout" class="section level3 unnumbered">
+<h3>Dashboard layout</h3>
+<div class="figure">
+<img src="img/dashboard_layout.png" />
+
+</div>
+</div>
+</div>
+<div id="deploy-as-online-application" class="section level2">
+<h2><span class="header-section-number">3.6</span> Deploy as Online Application</h2>
+<p>If you use <code>RStudio</code>, there is a publish button at the top-right corner of the script editor. It is possible to setup a <a href="https://www.rstudio.com/products/shiny/shiny-server/">Shiny Server Open Source</a> for free, but you have to set up and maintain the server by yourself.</p>
+<p>The easiest way is to use <a href="https://www.rstudio.com/">Rstudio</a>’s cloud deployment service called <a href="https://www.shinyapps.io/">Shinyapps.io</a>. It lets you deploy your application at various scales, <strong>starting at $0 for testing purposes and $9/month for small-scale applications.</strong> <a href="https://shiny.rstudio.com/deploy/">Learn more</a>.</p>
+<p>Here is Shinyapps.io’s pricing as of May 2018; <img src="img/Screen2.png" /></p>
+<ul>
+<li>For serious applications, other RStudio deployment and related services include</li>
+<li><a href="https://www.rstudio.com/pricing/#ConnectPricing">Rstudio Connect</a></li>
+<li><a href="https://www.rstudio.com/pricing/#ShinyProPricing">Shiny Server Pro</a></li>
+</ul>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="calculations-in-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="tips-from-excel-tool-to-shiny.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": true,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 3
+},
+"edit": {
+"link": "https://github.com/kotamine/excel_shiny/edit/master/excel_shiny.Rmd",
+"text": "Edit"
+},
+"download": null,
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"code_folding": "show",
+"theme": "spacelab",
+"highlight": "tango",
+"includes": {
+"in_header": "_includes/google_analytics.html",
+"after_body": "_includes/disqus.html"
+},
+"toolbar": {
+"position": "fixed"
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

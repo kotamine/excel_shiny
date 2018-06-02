@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Excel Tool to R-Shiny App</title>
+  <meta name="description" content="Excel Tool to R-Shiny App">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Excel Tool to R-Shiny App" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Excel Tool to R-Shiny App" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+
+<link rel="next" href="calculations-in-r.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Excel Tool to R-Shiny App</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#overview"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#objectives"><i class="fa fa-check"></i>Objectives</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="calculations-in-r.html"><a href="calculations-in-r.html"><i class="fa fa-check"></i><b>2</b> Calculations in R</a><ul>
+<li class="chapter" data-level="" data-path="calculations-in-r.html"><a href="calculations-in-r.html#inputs"><i class="fa fa-check"></i>Inputs</a></li>
+<li class="chapter" data-level="" data-path="calculations-in-r.html"><a href="calculations-in-r.html#calculations"><i class="fa fa-check"></i>Calculations</a></li>
+<li class="chapter" data-level="" data-path="calculations-in-r.html"><a href="calculations-in-r.html#outputs"><i class="fa fa-check"></i>Outputs</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html"><i class="fa fa-check"></i><b>3</b> Translating R codes into Shiny</a><ul>
+<li class="chapter" data-level="3.1" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#ui-and-server"><i class="fa fa-check"></i><b>3.1</b> UI and Server</a><ul>
+<li class="chapter" data-level="" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#ui-codes"><i class="fa fa-check"></i>UI codes</a></li>
+<li class="chapter" data-level="" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#server-logic-codes"><i class="fa fa-check"></i>Server Logic codes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#reactivity"><i class="fa fa-check"></i><b>3.2</b> Reactivity</a></li>
+<li class="chapter" data-level="3.3" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#inputs-1"><i class="fa fa-check"></i><b>3.3</b> Inputs</a></li>
+<li class="chapter" data-level="3.4" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#outputs-1"><i class="fa fa-check"></i><b>3.4</b> Outputs</a><ul>
+<li><a href="translating-r-codes-into-shiny.html#interactive-datatables-via-dt">Interactive datatables via <a href="https://rstudio.github.io/DT/">DT</a></a></li>
+<li><a href="translating-r-codes-into-shiny.html#figures-generated-by-ggplot2">Figures generated by <a href="http://ggplot2.tidyverse.org/">ggplot2</a></a></li>
+<li><a href="translating-r-codes-into-shiny.html#html-widgets"><a href="https://www.htmlwidgets.org/showcase_leaflet.html">HTML widgets</a></a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#layout"><i class="fa fa-check"></i><b>3.5</b> Layout</a><ul>
+<li class="chapter" data-level="" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#sidebar-layout"><i class="fa fa-check"></i>Sidebar layout</a></li>
+<li class="chapter" data-level="" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#navigation-bar-layout"><i class="fa fa-check"></i>Navigation bar layout</a></li>
+<li class="chapter" data-level="" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#dashboard-layout"><i class="fa fa-check"></i>Dashboard layout</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#deploy-as-online-application"><i class="fa fa-check"></i><b>3.6</b> Deploy as Online Application</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="tips-from-excel-tool-to-shiny.html"><a href="tips-from-excel-tool-to-shiny.html"><i class="fa fa-check"></i><b>4</b> Tips: from Excel tool to Shiny</a><ul>
+<li class="chapter" data-level="4.1" data-path="tips-from-excel-tool-to-shiny.html"><a href="tips-from-excel-tool-to-shiny.html#excel-like-functions"><i class="fa fa-check"></i><b>4.1</b> Excel-like functions</a></li>
+<li class="chapter" data-level="4.2" data-path="tips-from-excel-tool-to-shiny.html"><a href="tips-from-excel-tool-to-shiny.html#read-variables-from-csv-file"><i class="fa fa-check"></i><b>4.2</b> Read Variables from csv file</a></li>
+<li class="chapter" data-level="4.3" data-path="tips-from-excel-tool-to-shiny.html"><a href="tips-from-excel-tool-to-shiny.html#multiple-scenarios-in-columns"><i class="fa fa-check"></i><b>4.3</b> Multiple Scenarios in Columns</a></li>
+<li class="chapter" data-level="4.4" data-path="tips-from-excel-tool-to-shiny.html"><a href="tips-from-excel-tool-to-shiny.html#generating-a-report"><i class="fa fa-check"></i><b>4.4</b> Generating a Report</a></li>
+<li class="chapter" data-level="4.5" data-path="tips-from-excel-tool-to-shiny.html"><a href="tips-from-excel-tool-to-shiny.html#login-via-gmail"><i class="fa fa-check"></i><b>4.5</b> Login via Gmail</a></li>
+<li class="chapter" data-level="4.6" data-path="tips-from-excel-tool-to-shiny.html"><a href="tips-from-excel-tool-to-shiny.html#cloud-database-via-mongodb"><i class="fa fa-check"></i><b>4.6</b> Cloud database via MongoDB</a></li>
+<li class="chapter" data-level="4.7" data-path="tips-from-excel-tool-to-shiny.html"><a href="tips-from-excel-tool-to-shiny.html#google-analytics"><i class="fa fa-check"></i><b>4.7</b> Google Analytics</a></li>
+<li class="chapter" data-level="4.8" data-path="tips-from-excel-tool-to-shiny.html"><a href="tips-from-excel-tool-to-shiny.html#custom-layout-colors-and-html-modifications"><i class="fa fa-check"></i><b>4.8</b> Custom Layout, Colors, and HTML modifications</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="our-project-examples.html"><a href="our-project-examples.html"><i class="fa fa-check"></i><b>5</b> Our project examples</a><ul>
+<li class="chapter" data-level="5.1" data-path="our-project-examples.html"><a href="our-project-examples.html#automatic-calf-feeder"><i class="fa fa-check"></i><b>5.1</b> Automatic Calf Feeder</a></li>
+<li class="chapter" data-level="5.2" data-path="our-project-examples.html"><a href="our-project-examples.html#milking-robot-vs-parlor"><i class="fa fa-check"></i><b>5.2</b> Milking Robot vs Parlor</a></li>
+<li class="chapter" data-level="5.3" data-path="our-project-examples.html"><a href="our-project-examples.html#dairy-visual-benchmark"><i class="fa fa-check"></i><b>5.3</b> Dairy Visual Benchmark</a></li>
+<li class="chapter" data-level="5.4" data-path="our-project-examples.html"><a href="our-project-examples.html#dairy-geography"><i class="fa fa-check"></i><b>5.4</b> Dairy Geography</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="more-on-r-coding-and-tutorials.html"><a href="more-on-r-coding-and-tutorials.html"><i class="fa fa-check"></i><b>6</b> More on R coding and tutorials</a><ul>
+<li class="chapter" data-level="" data-path="more-on-r-coding-and-tutorials.html"><a href="more-on-r-coding-and-tutorials.html#shiny-examples"><i class="fa fa-check"></i>Shiny Examples</a></li>
+<li class="chapter" data-level="" data-path="more-on-r-coding-and-tutorials.html"><a href="more-on-r-coding-and-tutorials.html#shiny-resources"><i class="fa fa-check"></i>Shiny Resources</a></li>
+<li class="chapter" data-level="" data-path="more-on-r-coding-and-tutorials.html"><a href="more-on-r-coding-and-tutorials.html#r-resources"><i class="fa fa-check"></i>R Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="contact.html"><a href="contact.html"><i class="fa fa-check"></i><b>7</b> Contact</a><ul>
+<li class="chapter" data-level="" data-path="contact.html"><a href="contact.html#kota-minegishi"><i class="fa fa-check"></i>Kota Minegishi</a></li>
+<li class="chapter" data-level="" data-path="contact.html"><a href="contact.html#johnathan-nault"><i class="fa fa-check"></i>Johnathan Nault</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org/yihui/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Excel Tool to R-Shiny App</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Excel Tool to R-Shiny App</h1>
+<h4 class="date"><em>Version 0.2: June 1, 2018</em></h4>
+</div>
+<div id="introduction" class="section level1">
+<h1><span class="header-section-number">1</span> Introduction</h1>
+<p>Agricultural educators and extension researchers developing decision-making tools for farmers have long embraced spreadsheet environments like <strong>Microsoft Excel</strong>. Spreadsheet tools can be useful to assist farmers in financial planning, returns on investment, cost-benefit analysis, production, and market risk assessment etc. To some audiences, unfortunately, <em>spreadsheet tools can be intimidating or difficult to navigate.</em> One way to address this issue is to <strong>convert spreadsheet tools into interactive, online applications for increased accessibility and user experience,</strong> especially through utilizing state-of-the-art user-interface designs, data analytics presentations, and interactive features.</p>
+<p>This project provides <strong>a practical, introductory guide for converting spreadsheet tools into to online applications using programming language R via the Shiny package.</strong> <strong>R</strong> and <strong>Shiny</strong> are free, and the third-party online service for hosting Shiny applications is extremely low-cost in most situations.</p>
+<div id="overview" class="section level3 unnumbered">
+<h3>Overview</h3>
+<ul>
+<li>R is <strong>free</strong> &amp; extensive variety of <strong>packages</strong> available<br />
+</li>
+<li>R code <span class="math inline">\(\rightarrow\)</span> <strong>interactive webpage</strong></li>
+<li>No knowledge on HTML/CSS/JavaScript needed</li>
+<li>Requirements</li>
+<li>R</li>
+<li>some basic knowledge of R coding</li>
+<li>(Recommended) Rstudio</li>
+<li>R packages: shiny</li>
+</ul>
+</div>
+<div id="objectives" class="section level3 unnumbered">
+<h3>Objectives</h3>
+<ul>
+<li>Provide a quick introduction of shiny</li>
+<li>Share tips, example codes, and additional resources</li>
+<li>Initiate a community of decision-tool developers working with shiny</li>
+</ul>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="calculations-in-r.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": true,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 3
+},
+"edit": {
+"link": "https://github.com/kotamine/excel_shiny/edit/master/excel_shiny.Rmd",
+"text": "Edit"
+},
+"download": null,
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"code_folding": "show",
+"theme": "spacelab",
+"highlight": "tango",
+"includes": {
+"in_header": "_includes/google_analytics.html",
+"after_body": "_includes/disqus.html"
+},
+"toolbar": {
+"position": "fixed"
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

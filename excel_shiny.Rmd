@@ -2,20 +2,36 @@
 title: "Excel Tool to R-Shiny App"
 date: "Version 0.2:  June 1, 2018"
 output: 
-  html_document:
-    toc: true
-    toc_depth: 3
-    number_sections: true
-    toc_float: true
-    code_folding: show
-    theme: spacelab
-    highlight: tango
-    # css: custom_style_1.css
-    includes:
-      in_header: _includes/google_analytics.html
-      after_body: _includes/disqus.html
-runtime: shiny
+  # html_document:
+  bookdown::gitbook:
+    config:
+      toc:
+        collapse: section
+        scroll_highlight: yes
+        before: |
+          <li><a href="./">Excel Tool to R-Shiny App</a></li>
+        after: |
+          <li><a href="https://bookdown.org/yihui/bookdown" target="blank">Published with bookdown</a></li>
+      code_folding: show
+      theme: spacelab
+      highlight: tango
+      includes:
+        in_header: _includes/google_analytics.html
+        after_body: _includes/disqus.html
+      toolbar:
+        position: fixed
+      edit : https://github.com/kotamine/excel_shiny/edit/master/%s
+      download: null
+      search: yes
+      fontsettings:
+        size: 3
+      sharing:
+        facebook: yes
+        twitter: yes
+        linkedin: yes
+# runtime: shiny
 # rmarkdown::render('excel_shiny.Rmd', output_file='excel_shiny.html')
+# render_book('excel_shiny.Rmd', "bookdown::gitbook", output_dir = "docs", output_options = list(split_by ="chapter"))
 ---
 
 # Introduction 
@@ -522,19 +538,34 @@ For more advanced customization, feel free to contact us. Our programmer may hav
 
 # Our project examples 
 
-## [Automatic Calf Feeder Breakeven Price Calculator](https://kotamine.shinyapps.io/AutomaticCalfFeeder/) 
+## Automatic Calf Feeder
 
+[Visit live app](https://kotamine.shinyapps.io/AutomaticCalfFeeder/) 
+
+Here is a screen shot; 
 ![](img/Calf_feeder.png)
 
 
-## [Robot vs Parlor Investment Decision Calculator](https://kotamine.shinyapps.io/RobotParlor/)
+## Milking Robot vs Parlor
+
+[Visit live app](https://kotamine.shinyapps.io/RobotParlor/)
+
+Here is a screen shot; 
 ![](img/robot_parlor.png)  
 
 
-## [Dairy Visual Benchmark](https://kotamine.shinyapps.io/VisualBenchmark/) 
+## Dairy Visual Benchmark
+
+[Visit live app](https://kotamine.shinyapps.io/VisualBenchmark/) 
+
+Here is a screen shot;
 ![](img/Visual_benchmark.png)  
 
-## [Dairy Geography Visualization](https://kotamine.github.io/dairy_maps/) 
+## Dairy Geography 
+
+[Visit live app](https://kotamine.github.io/dairy_maps/) 
+
+Here is a screen shot; 
 ![](img/dairy_map.png) 
 
 
