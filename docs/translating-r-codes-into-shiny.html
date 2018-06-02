@@ -45,6 +45,16 @@
 
 
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97062240-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 
 <style type="text/css">
@@ -383,6 +393,18 @@ my_server &lt;-<span class="st"> </span>
 </ul>
 </div>
 </div>
+<div id="disqus_thread"></div>
+<script>
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://excel-shiny.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the
+<a href="https://disqus.com/?ref_noscript">
+  comments powered by Disqus.</a></noscript>
             </section>
 
           </div>
@@ -415,8 +437,8 @@ gitbook.start({
 },
 "fontsettings": {
 "theme": "white",
-"family": "sans",
-"size": 3
+"family": "serif",
+"size": 2
 },
 "edit": {
 "link": "https://github.com/kotamine/excel_shiny/edit/master/excel_shiny.Rmd",
@@ -430,10 +452,6 @@ gitbook.start({
 "code_folding": "show",
 "theme": "spacelab",
 "highlight": "tango",
-"includes": {
-"in_header": "_includes/google_analytics.html",
-"after_body": "_includes/disqus.html"
-},
 "toolbar": {
 "position": "fixed"
 },

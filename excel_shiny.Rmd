@@ -15,20 +15,21 @@ output:
       code_folding: show
       theme: spacelab
       highlight: tango
-      includes:
-        in_header: _includes/google_analytics.html
-        after_body: _includes/disqus.html
       toolbar:
         position: fixed
       edit : https://github.com/kotamine/excel_shiny/edit/master/%s
       download: null
       search: yes
       fontsettings:
-        size: 3
+        family: serif 
+        size: 2
       sharing:
         facebook: yes
         twitter: yes
         linkedin: yes
+    includes:
+      in_header: _includes/google_analytics.html
+      after_body: _includes/disqus.html
 # runtime: shiny
 # rmarkdown::render('excel_shiny.Rmd', output_file='excel_shiny.html')
 # render_book('excel_shiny.Rmd', "bookdown::gitbook", output_dir = "docs", output_options = list(split_by ="chapter"))
@@ -563,7 +564,7 @@ Here is a screen shot;
 
 ## Dairy Geography 
 
-[Visit live app](https://kotamine.github.io/dairy_maps/) 
+[Visit website](https://kotamine.github.io/dairy_maps/) 
 
 Here is a screen shot; 
 ![](img/dairy_map.png) 
