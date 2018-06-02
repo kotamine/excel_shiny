@@ -1,0 +1,13 @@
+name: google_login_example
+title: google_login_example
+username:
+account: kotamine
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 351287
+bundleId: 1402854
+url: https://kotamine.shinyapps.io/google_login_example/
+when: 1527780180.8212
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .httr-oauth|google_login_example.R

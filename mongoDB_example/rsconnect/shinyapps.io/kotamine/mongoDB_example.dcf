@@ -1,0 +1,12 @@
+name: mongoDB_example
+title: mongoDB_example
+username:
+account: kotamine
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 351817
+bundleId: 1402906
+url: https://kotamine.shinyapps.io/mongoDB_example/
+when: 1527781448.23457
+asMultiple: FALSE
+asStatic: FALSE

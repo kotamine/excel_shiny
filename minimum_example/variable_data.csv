@@ -1,0 +1,7 @@
+﻿variable,label,by_user,default,round_digits,min,max,step
+num_feeders,Number of Feeders,1,2,0,0,Inf,1
+num_calves,Number of Calves,1,30,0,0,Inf,1
+calves_total,Total number of calves that can be fed in a given point of time,0,,0,,,
+days_on_feeder,Days on Feeder,1,60,0,0,Inf,1
+group_turns,Groups of calves that can be turned over a year,0,,1,,,
+calves_yr,Calves that can be fed per year,0,,0,,,

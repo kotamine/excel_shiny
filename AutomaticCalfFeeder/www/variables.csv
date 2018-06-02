@@ -1,0 +1,47 @@
+header,variable,label,by_user,default,round,min,max,step,note,svy_min,svy_max,svy_avg
+,scenario_label,Name your feeder investment scenarios,1,Scenario,,,,,,,,
+Capital Cost,,,,,,,,,,,,
+,num_feeders,Number of feeders planned,1,2,0,0,Inf,1,,1,3,
+,num_calves,Number of calves that will be fed/feeder,1,30,0,0,Inf,1,survey average 35 calves with a range of 7 - 85,7,85,35
+,calves_total,Total number of calves fed by all feeders,0,60,0,,,,,,,
+,days_on_feeder,"Days on feeder/group, including cleanup",1,60,0,0,Inf,1,survey range 53 - 55 plus about 5 days of clean up,51,55,53
+,group_turns,Groups fed/year,0,6.1,1,,,,,,,
+,calves_yr,Calves fed/year,0,365,0,,,,,,,
+,feeder_cost,Cost to purchase and install/feeder,1,"$20,000 ",0,0,Inf,2000,survey average $18 k with a range of $10 - 80 k,"$10,000 ","$80,000 ","$18,000 "
+,feeder_cost_total,Total cost of feeders to purchase and install,0,"$40,000 ",0,,,,,,,
+,building_cost,Cost of building and equipment other than the feeders themselves,1,"$35,000 ",0,0,Inf,2000,survey average $25 k with a range of $0 - 540 k,$0 ,"$540,000 ","$25,000 "
+,cost_investment,Total investment required,0,"$75,000 ",0,,,,,,,
+,life_feeder,What do you expect the useful life of the feeder to be (years)?,1,20,0,0,Inf,1,survey range 10 to 20 years,10,20,
+,interest_rate,Interest rate you would place on the investment,1,5.00%,0,0,Inf,0.25,,2%,10%,5%
+,capital_cost,"Capital cost, $/year",0,"$6,018 ",0,,,,,,,
+,capital_cost_calf, - per calf,0,$16.49 ,2,,,,,,,
+Repair Cost,,,,,,,,,,,,
+,repair_cost_feeder,"Repairs & maintenance for feeder, $/feeder/year",1,"$2,000 ",0,0,Inf,500,"survey average $2,000 with a range of $100 - 30,000 k",$100 ,"$30,000 ","$2,000 "
+,repair_cost_building,"Repairs & maintenance for building & other equipment, $/year",1,$500 ,0,0,Inf,100,"survey average $600k with a range of $100 - 1,500 k",$100 ,"$1,500 ",$600 
+,repair_calf,"Total repairs & maintenance, $/calf",1,$12.33 ,2,0,Inf,,,,,
+Labor Cost,,,,,,,,,,,,
+,labor_feeder,"Chore labor to take care of calves and feeder, hours/day",1,0.2,1,0,Inf,0.1,survey average 2 hours with a range of 0.2 to 10,0.2,10,2
+,labor_repair,"Labor to repair feeder and other occasional tasks, hours/year",1,90,0,0,Inf,10,survey average 120 hours with a range of 1 to 240,1,240,120
+,wage,"Labor cost including fringe benefits, $/hour",1,$20.00 ,2,0,Inf,,survey average $16 with a range of $8 to $25,$8 ,$25 ,$16 
+,labor_total,"Total labor cost, $/year",0,"$3,260 ",0,,,,,,,
+,labor_total_calf, - per calf,0,$8.93 ,2,,,,,,,
+,cap_rep_lab_calf,"Total capital, repairs, and labor cost, $/calf",0,$37.75 ,2,,,,,,,
+Operation Cost,,,,,,,,,,,,
+,feed,"Feed, $/hd",1,$140.00 ,2,0,Inf,10,survey average $140 with a range of $54 to $240,$54.00 ,$240.00 ,$140.00 
+,vet,"Veterinary/vac., $/hd",1,$10.00 ,2,0,Inf,10,survey average $10 with a range of $1 to $15,$0.98 ,$15.00 ,$10.00 
+,supplies,Supplies $/hd,1,$10.00 ,2,0,Inf,10,survey average $10 with a range of $1 to $55,$0.57 ,$55.00 ,$10.00 
+,fuel,Fuel & oil $/hd,1,$2.40 ,2,0,Inf,10,survey average $2.4 with a range of $0.2 to $4.2,$0.23 ,$4.21 ,$2.40 
+,utilities,Utilities $/hd,1,$60.00 ,2,0,Inf,10,survey average $60 with a range of $0 to $524,$0.01 ,$524.22 ,$60.00 
+,bedding,Bedding $/hd,1,$30.00 ,2,0,Inf,10,survey average $30 with a range of $2 to $235,$1.50 ,$235.29 ,$30.00 
+,building_lease,Building lease costs $/hd,1,$50.00 ,2,0,Inf,10,survey average $50 with a range of $2 to $122,$1.67 ,$121.67 ,$50.00 
+,farm_insurance,Farm insurance $/hd,1,$10.00 ,2,0,Inf,10,survey average $10 with a range of $0 to $61,$0.00 ,$60.83 ,$10.00 
+,misc,Miscellaneous $/hd,1,$90.00 ,2,0,Inf,10,survey average $90 with a range of $0 to $304,$0.38 ,$304.17 ,$90.00 
+,operating_calf,Total operating costs $/hd w/o calf,0,$402.40 ,2,,,,,$59 ,"$1,560 ",$402 
+,cost_total_calf,"Total capital, repairs, labor & operating costs/calf",0,$440.15 ,2,,,,,,,
+Opportunity Cost,,,,,,,,,,,,
+,price_calf,Market value of a calf when placed on the feeder,1,$100.00 ,2,0,Inf,10,survey average $175 with a range of $80 to $300,$80 ,$300 ,$175 
+,cost_price_calf,"Total capital, labor, operating & calf costs/calf",0,$540.15 ,2,,,,,,,
+Cost of Mortality,,,,,,0,Inf,,,,,
+,mortality,"Mortality rate of calves while on the feeder, % of number entering",1,2.50%,1,0,Inf,0.25,survey average 0.03% with a range of 0.01% to 0.07%,1%,7%,3%
+Breakeven Value,,,,,,,,,,,,
+,breakeven,Breakeven market value of a calf when leaving the feeder,0,$554.00 ,2,,,,,,,

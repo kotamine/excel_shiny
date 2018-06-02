@@ -1,0 +1,13 @@
+name: excel_Shiny_minimum_example
+title: excel_Shiny_minimum_example
+username:
+account: kotamine
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 350581
+bundleId: 1398754
+url: https://kotamine.shinyapps.io/excel_Shiny_minimum_example/
+when: 1527610774.24847
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: excel_shiny.html|excel_shiny.Rmd|server.R|simple_robot_return.xlsx|ui.R|AutomaticCalfFeeder

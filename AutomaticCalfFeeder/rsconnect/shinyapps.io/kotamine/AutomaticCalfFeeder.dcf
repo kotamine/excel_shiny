@@ -1,0 +1,11 @@
+name: AutomaticCalfFeeder
+title: AutomaticCalfFeeder
+account: kotamine
+server: shinyapps.io
+appId: 174856
+bundleId: 801514
+url: https://kotamine.shinyapps.io/AutomaticCalfFeeder/
+when: 1493046850.84127
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: calf_feeder_decisiontool.2xlsm.xlsm|dairy_calf_questionnaire_database110116merged.xlsm|survey_data_summary.nb.html|survey_data_summary.Rmd|survey_data.R

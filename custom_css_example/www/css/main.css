@@ -1,0 +1,29 @@
+.content-body {
+  margin: 0 auto;
+  width: 600px;
+}
+
+.row-label {
+  display: inline-block;
+  font-weight: 700;
+  margin-left: 15px;
+}
+
+.column-labels,
+.column-inputs {
+  display: inline-block;
+  float: right;
+}
+
+.column-labels > div {
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+  width: 100px;
+}
+
+.column-inputs > .shiny-input-container {
+  display: inline-block;
+  margin: 0;
+  width: 100px;
+}

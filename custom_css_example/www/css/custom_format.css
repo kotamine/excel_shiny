@@ -1,0 +1,62 @@
+.content-body {
+  
+  background-color: #900021;
+  border: 1px solid #FFDE7A;
+  border-radius: 10px;
+  padding: 15px;
+  
+  margin: 15px auto;
+  width: 600px;
+  
+}
+
+h2 {
+  
+  background-color: #FFDE7A;
+  border-radius: 10px;
+  color: #900021;
+  text-align: center;
+  
+}
+
+.row {
+  
+  margin: 0 15px;
+  
+}
+
+.row-label {
+  
+  color: white;
+  
+  display: inline-block;
+  font-weight: 700;
+  
+}
+
+.column-labels,
+.column-inputs {
+  
+  display: inline-block;
+  float: right;
+  
+}
+
+.column-labels > div {
+  
+  color: white;
+  
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+  width: 100px;
+  
+}
+
+.column-inputs > .shiny-input-container {
+  
+  display: inline-block;
+  margin: 0;
+  width: 100px;
+  
+}

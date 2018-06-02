@@ -1,0 +1,14 @@
+$(document).on('shiny:inputchanged', function(event) {
+       if (event.name === 'num_feeders') {
+         trackingFunction(['trackEvent', 'Number of Feeders',
+           'Class of Model', event.name, event.value]);
+       }
+       if (event.name === 'num_calves') {
+         trackingFunction(['trackEvent', 'Number of Calves',
+           'Class of Model', event.name, event.value]);
+       }
+        if (event.name === 'days_on_feeder') {
+         trackingFunction(['trackEvent', 'Days on Feeder',
+           'Class of Model', event.name, event.value]);
+       }
+     });

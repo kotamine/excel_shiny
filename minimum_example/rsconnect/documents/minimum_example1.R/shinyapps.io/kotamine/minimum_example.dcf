@@ -1,0 +1,13 @@
+name: minimum_example
+title: minimum_example
+username:
+account: kotamine
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 352712
+bundleId: 1405847
+url: https://kotamine.shinyapps.io/minimum_example/
+when: 1527881425.2061
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: google_analytics_snippet.html|google_analytics_tracking.html|google_analytics_tracking.js|google_analytics_tracking2.js|helpers_excel.R|minimum_example2.R|minimum_example3.R|variable_data.csv
