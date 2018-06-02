@@ -11,6 +11,9 @@ output:
     theme: spacelab
     highlight: tango
     # css: custom_style_1.css
+    includes:
+      in_header: _includes/google_analytics.html
+      after_body: _includes/disqus.html
 runtime: shiny
 # rmarkdown::render('excel_shiny.Rmd', output_file='excel_shiny.html')
 ---
