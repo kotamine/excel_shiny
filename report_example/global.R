@@ -6,8 +6,6 @@ library(knitr)
 library(dplyr)
 library(ggplot2)
 
-source("helpers.R")
-
 get_time_epoch <- function() {
   return(as.integer(Sys.time()))
 }
@@ -15,3 +13,5 @@ get_time_epoch <- function() {
 get_time_human <- function() {
   format(Sys.time(), "%Y-%m-%d-%H:%M:%OS")
 }
+
+source("helpers.R")

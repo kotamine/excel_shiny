@@ -5,8 +5,9 @@ account: kotamine
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 352198
-bundleId: 1404099
+bundleId: 1413055
 url: https://kotamine.shinyapps.io/report_example/
-when: 1527812637.92964
+when: 1528221314.22645
 asMultiple: FALSE
 asStatic: FALSE
+ignoredFiles: misc.R
