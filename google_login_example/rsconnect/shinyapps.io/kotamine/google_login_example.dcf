@@ -5,9 +5,9 @@ account: kotamine
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 351287
-bundleId: 1402854
+bundleId: 1412984
 url: https://kotamine.shinyapps.io/google_login_example/
-when: 1527780180.8212
+when: 1528218621.92131
 asMultiple: FALSE
 asStatic: FALSE
-ignoredFiles: .httr-oauth|google_login_example.R
+ignoredFiles: .httr-oauth|.Rbuildignore

@@ -19,4 +19,9 @@ options("googleAuthR.webapp.client_id" = CLIENT_ID)
 options("googleAuthR.webapp.client_secret" = CLIENT_SECRET)
 options("googleAuthR.scopes.selected" = c("https://www.googleapis.com/auth/userinfo.email",
                                           "https://www.googleapis.com/auth/userinfo.profile"))
+
+
+# googleAuthR::gar_auth()
+
 ems <- function(txt) em(strong(txt)) 
+

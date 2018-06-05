@@ -467,10 +467,6 @@ server <-
 
 [Live app is here](https://kotamine.shinyapps.io/google_login_example/)
 
-THERE IS A TECHNICAL ISSUE AT THE MOMENT. 
-
-<!--- John, could you fix the "disconnect" issue ?  -->
-
 
 Here is a screen shot;
 
