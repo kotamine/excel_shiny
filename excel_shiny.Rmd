@@ -49,10 +49,10 @@ This project provides **a practical, introductory guide for converting spreadshe
 * R code $\rightarrow$ **interactive webpage**
 * No knowledge on HTML/CSS/JavaScript needed 
 * Requirements 
-  + R 
-  + some basic knowledge of R coding
-  + (Recommended) Rstudio
-  + R packages: shiny 
+    + R 
+    + some basic knowledge of R coding
+    + (Recommended) Rstudio
+    + R packages: shiny 
 
 ### Objectives {-}
 
@@ -67,9 +67,9 @@ Consider a very simple example: <br>
 
 ## Inputs {-}
 * Define inputs to calculate calves 
-  * number of feeders: default = 2 
-  * number of calves: default = 30
-  * days calves are fed by the feeder: default = 60
+    * number of feeders: default = 2 
+    * number of calves: default = 30
+    * days calves are fed by the feeder: default = 60
 ```{r}
 num_feeders <- 2 
 num_calves <- 30 
@@ -192,22 +192,22 @@ Here is a screen shot.
 **Reactivity** makes an online application interactive. As the user changes inputs, the server can return updated calculation results. 
 
 * For most purposes, it suffices to think
-  + **input** as a source of trigger for reactivity 
-  + **ouput** as an endpoint of the reaction 
-  + Learn more: [reactivity-overview](https://shiny.rstudio.com/articles/reactivity-overview.html)
+    + **input** as a source of trigger for reactivity 
+    + **ouput** as an endpoint of the reaction 
+    + Learn more: [reactivity-overview](https://shiny.rstudio.com/articles/reactivity-overview.html)
 
 In the above example, if a user changes the value of `input$num_feeders`, this sends a signal to update all **output** items  (visible on the webpage) that are connected to  `input$num_feeders`. This updates `calves_total`, which then updates `output$calves_total` and `output$calves_yr`.   
 
 * Another common way to trigger reactivity is via 
-  + `observe({...})`: react to changes in any **input***$inpute_item* in ...  
-  + `observeEvent(input$input_trigger, {...})`: react to changes in **input***$input_trigger*
+    + `observe({...})`: react to changes in any **input***$inpute_item* in ...  
+    + `observeEvent(input$input_trigger, {...})`: react to changes in **input***$input_trigger*
 
 For example, the above example can be modified, so that it only reacts when a button named "Update" is pressed. 
 
 * Notes on this modification
-  + `reactiveValues()`: creates a reactive value object (list) 
-  + inside `observeEvent()`, reactive updates are specified 
-  + reactive values are accessed for rendering by *reactivevlaues_object$item_name*  
+    + `reactiveValues()`: creates a reactive value object (list) 
+    + inside `observeEvent()`, reactive updates are specified 
+    + reactive values are accessed for rendering by *reactivevlaues_object$item_name*  
 ```{r, eval=FALSE}
 # also saved in 'minimum_example2.R' 
 
@@ -237,11 +237,11 @@ my_server <-
 ## Inputs
 
 * Input types included in `shiny` package, for example   
-  + `numericInput()`
-  + `actionButton()`
-  + `checkboxInput()`
-  + `dateInput()`
-  + `selectInput()`
+    + `numericInput()`
+    + `actionButton()`
+    + `checkboxInput()`
+    + `dateInput()`
+    + `selectInput()`
 
 ![](img/input_types.png)
 
@@ -289,9 +289,9 @@ Here is Shinyapps.io's pricing as of May 2018;
 ![](img/Screen2.png)
 
 * For serious applications, other RStudio deployment and related services include
-   + [Rstudio Connect](https://www.rstudio.com/pricing/#ConnectPricing)
-   + [Shiny Server Pro](https://www.rstudio.com/pricing/#ShinyProPricing)
-
+     + [Rstudio Connect](https://www.rstudio.com/pricing/#ConnectPricing)
+     + [Shiny Server Pro](https://www.rstudio.com/pricing/#ShinyProPricing)
+  
 
 # Tips: from Excel tool to Shiny  
 

@@ -14,7 +14,7 @@
   
   
   
-  
+  <meta name="github-repo" content="/kotamine/excel_shiny" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Excel Tool to R-Shiny App" />
@@ -58,41 +58,69 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 </head>
@@ -127,9 +155,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="3.2" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#reactivity"><i class="fa fa-check"></i><b>3.2</b> Reactivity</a></li>
 <li class="chapter" data-level="3.3" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#inputs-1"><i class="fa fa-check"></i><b>3.3</b> Inputs</a></li>
 <li class="chapter" data-level="3.4" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#outputs-1"><i class="fa fa-check"></i><b>3.4</b> Outputs</a><ul>
-<li><a href="translating-r-codes-into-shiny.html#interactive-datatables-via-dt">Interactive datatables via <a href="https://rstudio.github.io/DT/">DT</a></a></li>
-<li><a href="translating-r-codes-into-shiny.html#figures-generated-by-ggplot2">Figures generated by <a href="http://ggplot2.tidyverse.org/">ggplot2</a></a></li>
-<li><a href="translating-r-codes-into-shiny.html#html-widgets"><a href="https://www.htmlwidgets.org/showcase_leaflet.html">HTML widgets</a></a></li>
+<li><a href="translating-r-codes-into-shiny.html#interactive-datatables-via-dt">Interactive datatables via <span>DT</span></a></li>
+<li><a href="translating-r-codes-into-shiny.html#figures-generated-by-ggplot2">Figures generated by <span>ggplot2</span></a></li>
+<li><a href="translating-r-codes-into-shiny.html#html-widgets"><span>HTML widgets</span></a></li>
 </ul></li>
 <li class="chapter" data-level="3.5" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#layout"><i class="fa fa-check"></i><b>3.5</b> Layout</a><ul>
 <li class="chapter" data-level="" data-path="translating-r-codes-into-shiny.html"><a href="translating-r-codes-into-shiny.html#sidebar-layout"><i class="fa fa-check"></i>Sidebar layout</a></li>
@@ -188,195 +216,189 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="excel-like-functions" class="section level2">
 <h2><span class="header-section-number">4.1</span> Excel-like functions</h2>
 <p>One can easily define functions in R. For example, functions for Net Present Value, Internal Rate of Returns, and loan payment etc.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># saved in helpers_excel.R</span>
-
-npv &lt;-<span class="st"> </span><span class="cf">function</span>(rate, values) <span class="kw">sum</span>(values <span class="op">/</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">+</span><span class="st"> </span>rate)<span class="op">^</span><span class="kw">seq_along</span>(values))
-
-irr &lt;-<span class="st"> </span><span class="cf">function</span>(x, <span class="dt">start=</span><span class="fl">0.1</span>) {
-  t &lt;-<span class="st"> </span><span class="kw">seq_along</span>(x)<span class="op">-</span><span class="dv">1</span>
-  f &lt;-<span class="st"> </span><span class="cf">function</span>(i) <span class="kw">abs</span>(<span class="kw">sum</span>(x<span class="op">/</span>(<span class="dv">1</span><span class="op">+</span>i)<span class="op">^</span>t))
-  <span class="kw">return</span>(<span class="kw">nlm</span>(f,start)<span class="op">$</span>estimate)
-}
-
-fv &lt;-<span class="st"> </span><span class="cf">function</span>(rate, nper, pmt, <span class="dt">pv =</span> <span class="fl">0.0</span>, <span class="dt">type =</span> <span class="dv">0</span>) {
-  pvif &lt;-<span class="st"> </span>(<span class="dv">1</span><span class="op">+</span>rate)<span class="op">^</span>nper <span class="co"># Present value interest factor</span>
-  fvifa &lt;-<span class="st"> </span><span class="cf">if</span>(rate<span class="op">==</span><span class="dv">0</span>) nper <span class="cf">else</span> ((<span class="dv">1</span><span class="op">+</span>rate)<span class="op">^</span>nper <span class="op">-</span><span class="st"> </span><span class="dv">1</span>) <span class="op">/</span><span class="st"> </span>rate
-  <span class="kw">return</span>(<span class="op">-</span>((pv <span class="op">*</span><span class="st"> </span>pvif) <span class="op">+</span><span class="st"> </span>pmt <span class="op">*</span><span class="st"> </span>(<span class="fl">1.0</span> <span class="op">+</span><span class="st"> </span>rate <span class="op">*</span><span class="st"> </span>type) <span class="op">*</span><span class="st"> </span>fvifa))
-}
-
-pv &lt;-<span class="st"> </span><span class="cf">function</span>(rate, nper, pmt, <span class="dt">fv =</span> <span class="fl">0.0</span>, <span class="dt">type =</span> <span class="dv">0</span>) {
-  pvif &lt;-<span class="st"> </span>(<span class="dv">1</span><span class="op">+</span>rate)<span class="op">^</span>nper <span class="co"># Present value interest factor</span>
-  fvifa &lt;-<span class="st"> </span><span class="cf">if</span>(rate<span class="op">==</span><span class="dv">0</span>) nper <span class="cf">else</span> ((<span class="dv">1</span><span class="op">+</span>rate)<span class="op">^</span>nper <span class="op">-</span><span class="st"> </span><span class="dv">1</span>) <span class="op">/</span><span class="st"> </span>rate
-  <span class="kw">return</span>((<span class="op">-</span>fv <span class="op">-</span><span class="st"> </span>pmt <span class="op">*</span><span class="st"> </span>(<span class="fl">1.0</span> <span class="op">+</span><span class="st"> </span>rate <span class="op">*</span><span class="st"> </span>type) <span class="op">*</span><span class="st"> </span>fvifa) <span class="op">/</span><span class="st"> </span>pvif)
-}
-
-pmt &lt;-<span class="st"> </span><span class="cf">function</span>(rate, nper, pv, <span class="dt">fv=</span><span class="dv">0</span>, <span class="dt">type=</span><span class="dv">0</span>) {
-  rr &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">/</span>(<span class="dv">1</span><span class="op">+</span>rate)<span class="op">^</span>nper
-  res &lt;-<span class="st"> </span>(<span class="op">-</span>pv<span class="op">-</span>fv<span class="op">*</span>rr)<span class="op">*</span>rate<span class="op">/</span>(<span class="dv">1</span><span class="op">-</span>rr)
-  <span class="kw">return</span>(res<span class="op">/</span>(<span class="dv">1</span><span class="op">+</span>rate<span class="op">*</span>type))
-}</code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="co"># saved in helpers_excel.R</span></a>
+<a class="sourceLine" id="cb12-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb12-3" data-line-number="3">npv &lt;-<span class="st"> </span><span class="cf">function</span>(rate, values) <span class="kw">sum</span>(values <span class="op">/</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">+</span><span class="st"> </span>rate)<span class="op">^</span><span class="kw">seq_along</span>(values))</a>
+<a class="sourceLine" id="cb12-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb12-5" data-line-number="5">irr &lt;-<span class="st"> </span><span class="cf">function</span>(x, <span class="dt">start=</span><span class="fl">0.1</span>) {</a>
+<a class="sourceLine" id="cb12-6" data-line-number="6">  t &lt;-<span class="st"> </span><span class="kw">seq_along</span>(x)<span class="op">-</span><span class="dv">1</span></a>
+<a class="sourceLine" id="cb12-7" data-line-number="7">  f &lt;-<span class="st"> </span><span class="cf">function</span>(i) <span class="kw">abs</span>(<span class="kw">sum</span>(x<span class="op">/</span>(<span class="dv">1</span><span class="op">+</span>i)<span class="op">^</span>t))</a>
+<a class="sourceLine" id="cb12-8" data-line-number="8">  <span class="kw">return</span>(<span class="kw">nlm</span>(f,start)<span class="op">$</span>estimate)</a>
+<a class="sourceLine" id="cb12-9" data-line-number="9">}</a>
+<a class="sourceLine" id="cb12-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb12-11" data-line-number="11">fv &lt;-<span class="st"> </span><span class="cf">function</span>(rate, nper, pmt, <span class="dt">pv =</span> <span class="fl">0.0</span>, <span class="dt">type =</span> <span class="dv">0</span>) {</a>
+<a class="sourceLine" id="cb12-12" data-line-number="12">  pvif &lt;-<span class="st"> </span>(<span class="dv">1</span><span class="op">+</span>rate)<span class="op">^</span>nper <span class="co"># Present value interest factor</span></a>
+<a class="sourceLine" id="cb12-13" data-line-number="13">  fvifa &lt;-<span class="st"> </span><span class="cf">if</span>(rate<span class="op">==</span><span class="dv">0</span>) nper <span class="cf">else</span> ((<span class="dv">1</span><span class="op">+</span>rate)<span class="op">^</span>nper <span class="op">-</span><span class="st"> </span><span class="dv">1</span>) <span class="op">/</span><span class="st"> </span>rate</a>
+<a class="sourceLine" id="cb12-14" data-line-number="14">  <span class="kw">return</span>(<span class="op">-</span>((pv <span class="op">*</span><span class="st"> </span>pvif) <span class="op">+</span><span class="st"> </span>pmt <span class="op">*</span><span class="st"> </span>(<span class="fl">1.0</span> <span class="op">+</span><span class="st"> </span>rate <span class="op">*</span><span class="st"> </span>type) <span class="op">*</span><span class="st"> </span>fvifa))</a>
+<a class="sourceLine" id="cb12-15" data-line-number="15">}</a>
+<a class="sourceLine" id="cb12-16" data-line-number="16"></a>
+<a class="sourceLine" id="cb12-17" data-line-number="17">pv &lt;-<span class="st"> </span><span class="cf">function</span>(rate, nper, pmt, <span class="dt">fv =</span> <span class="fl">0.0</span>, <span class="dt">type =</span> <span class="dv">0</span>) {</a>
+<a class="sourceLine" id="cb12-18" data-line-number="18">  pvif &lt;-<span class="st"> </span>(<span class="dv">1</span><span class="op">+</span>rate)<span class="op">^</span>nper <span class="co"># Present value interest factor</span></a>
+<a class="sourceLine" id="cb12-19" data-line-number="19">  fvifa &lt;-<span class="st"> </span><span class="cf">if</span>(rate<span class="op">==</span><span class="dv">0</span>) nper <span class="cf">else</span> ((<span class="dv">1</span><span class="op">+</span>rate)<span class="op">^</span>nper <span class="op">-</span><span class="st"> </span><span class="dv">1</span>) <span class="op">/</span><span class="st"> </span>rate</a>
+<a class="sourceLine" id="cb12-20" data-line-number="20">  <span class="kw">return</span>((<span class="op">-</span>fv <span class="op">-</span><span class="st"> </span>pmt <span class="op">*</span><span class="st"> </span>(<span class="fl">1.0</span> <span class="op">+</span><span class="st"> </span>rate <span class="op">*</span><span class="st"> </span>type) <span class="op">*</span><span class="st"> </span>fvifa) <span class="op">/</span><span class="st"> </span>pvif)</a>
+<a class="sourceLine" id="cb12-21" data-line-number="21">}</a>
+<a class="sourceLine" id="cb12-22" data-line-number="22"></a>
+<a class="sourceLine" id="cb12-23" data-line-number="23">pmt &lt;-<span class="st"> </span><span class="cf">function</span>(rate, nper, pv, <span class="dt">fv=</span><span class="dv">0</span>, <span class="dt">type=</span><span class="dv">0</span>) {</a>
+<a class="sourceLine" id="cb12-24" data-line-number="24">  rr &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">/</span>(<span class="dv">1</span><span class="op">+</span>rate)<span class="op">^</span>nper</a>
+<a class="sourceLine" id="cb12-25" data-line-number="25">  res &lt;-<span class="st"> </span>(<span class="op">-</span>pv<span class="op">-</span>fv<span class="op">*</span>rr)<span class="op">*</span>rate<span class="op">/</span>(<span class="dv">1</span><span class="op">-</span>rr)</a>
+<a class="sourceLine" id="cb12-26" data-line-number="26">  <span class="kw">return</span>(res<span class="op">/</span>(<span class="dv">1</span><span class="op">+</span>rate<span class="op">*</span>type))</a>
+<a class="sourceLine" id="cb12-27" data-line-number="27">}</a></code></pre></div>
 </div>
 <div id="read-variables-from-csv-file" class="section level2">
 <h2><span class="header-section-number">4.2</span> Read Variables from csv file</h2>
 <p>When you have many user-provided input variables and many outputs that are returned to the user, it is convenient to automate the definition of <strong>input</strong> and <strong>output</strong> through a loop.</p>
 <p>For example, consider a table of variable name, label, indicator for a user-provided input, default value etc.</p>
-<div class="figure">
-<img src="img/csv_img.png" />
-
-</div>
+<p><img src="img/csv_img.png" /></p>
 <p>This kind of table can be converted into UI objects in a loop. For example, each row can be processed by <code>lapply()</code> function;</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># saved in minimum_example3.R</span>
-
-df  &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;variable_data.csv&quot;</span>, <span class="dt">stringsAsFactors =</span><span class="ot">FALSE</span>) 
-
-my_ui &lt;-<span class="st"> </span>
-<span class="st">  </span><span class="kw">fluidPage</span>(
-    
-    <span class="co"># define inputs</span>
-    <span class="kw">with</span>(df, 
-         <span class="kw">lapply</span>(<span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(df), <span class="cf">function</span>(i) {
-           <span class="cf">if</span> (by_user[i] <span class="op">==</span><span class="st"> </span><span class="dv">1</span>) { <span class="co"># select only inputs provided by user</span>
-             <span class="kw">numericInput</span>(<span class="dt">inputId =</span> variable[i], <span class="dt">label =</span> label[i], <span class="dt">value=</span>default[i])
-           }
-         })
-    ), 
-    
-    <span class="co"># define outputs   </span>
-    <span class="kw">with</span>(df, 
-         <span class="kw">lapply</span>(<span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(df), <span class="cf">function</span>(i) {
-           <span class="cf">if</span> (by_user[i] <span class="op">==</span><span class="st"> </span><span class="dv">0</span> ) { <span class="co"># select only outputs returned to user </span>
-             <span class="kw">uiOutput</span>(variable[i])
-           }
-         })
-    )
-  )</code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="co"># saved in minimum_example3.R</span></a>
+<a class="sourceLine" id="cb13-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb13-3" data-line-number="3">df  &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;variable_data.csv&quot;</span>, <span class="dt">stringsAsFactors =</span><span class="ot">FALSE</span>) </a>
+<a class="sourceLine" id="cb13-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb13-5" data-line-number="5">my_ui &lt;-<span class="st"> </span></a>
+<a class="sourceLine" id="cb13-6" data-line-number="6"><span class="st">  </span><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb13-7" data-line-number="7">    </a>
+<a class="sourceLine" id="cb13-8" data-line-number="8">    <span class="co"># define inputs</span></a>
+<a class="sourceLine" id="cb13-9" data-line-number="9">    <span class="kw">with</span>(df, </a>
+<a class="sourceLine" id="cb13-10" data-line-number="10">         <span class="kw">lapply</span>(<span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(df), <span class="cf">function</span>(i) {</a>
+<a class="sourceLine" id="cb13-11" data-line-number="11">           <span class="cf">if</span> (by_user[i] <span class="op">==</span><span class="st"> </span><span class="dv">1</span>) { <span class="co"># select only inputs provided by user</span></a>
+<a class="sourceLine" id="cb13-12" data-line-number="12">             <span class="kw">numericInput</span>(<span class="dt">inputId =</span> variable[i], <span class="dt">label =</span> label[i], <span class="dt">value=</span>default[i])</a>
+<a class="sourceLine" id="cb13-13" data-line-number="13">           }</a>
+<a class="sourceLine" id="cb13-14" data-line-number="14">         })</a>
+<a class="sourceLine" id="cb13-15" data-line-number="15">    ), </a>
+<a class="sourceLine" id="cb13-16" data-line-number="16">    </a>
+<a class="sourceLine" id="cb13-17" data-line-number="17">    <span class="co"># define outputs   </span></a>
+<a class="sourceLine" id="cb13-18" data-line-number="18">    <span class="kw">with</span>(df, </a>
+<a class="sourceLine" id="cb13-19" data-line-number="19">         <span class="kw">lapply</span>(<span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(df), <span class="cf">function</span>(i) {</a>
+<a class="sourceLine" id="cb13-20" data-line-number="20">           <span class="cf">if</span> (by_user[i] <span class="op">==</span><span class="st"> </span><span class="dv">0</span> ) { <span class="co"># select only outputs returned to user </span></a>
+<a class="sourceLine" id="cb13-21" data-line-number="21">             <span class="kw">uiOutput</span>(variable[i])</a>
+<a class="sourceLine" id="cb13-22" data-line-number="22">           }</a>
+<a class="sourceLine" id="cb13-23" data-line-number="23">         })</a>
+<a class="sourceLine" id="cb13-24" data-line-number="24">    )</a>
+<a class="sourceLine" id="cb13-25" data-line-number="25">  )</a></code></pre></div>
 </div>
 <div id="multiple-scenarios-in-columns" class="section level2">
 <h2><span class="header-section-number">4.3</span> Multiple Scenarios in Columns</h2>
 <p>Excel-based decision-making tools are often designed to contain variables in rows and varying scenarios in columns via CSS.</p>
 <p>An example is shown in <em>input_columns.R</em> and <em>main.css</em> in <em>custom_css_example</em> folder.</p>
-<p>Here is a screen shot; <img src="img/input_columns.png" /></p>
+<p>Here is a screen shot;
+<img src="img/input_columns.png" /></p>
 </div>
 <div id="generating-a-report" class="section level2">
 <h2><span class="header-section-number">4.4</span> Generating a Report</h2>
 <p>Using <a href="https://rmarkdown.rstudio.com/">Rmarkdown</a> and <a href="https://yihui.name/knitr/">knitr</a>, it is easy to add a report function containing texts and objects from a shiny app.</p>
 <p><a href="https://kotamine.shinyapps.io/report_example/">Live app is here</a></p>
-<p>Here is a screen shot; <img src="img/report_example.png" /></p>
+<p>Here is a screen shot;
+<img src="img/report_example.png" /></p>
 </div>
 <div id="login-via-gmail" class="section level2">
 <h2><span class="header-section-number">4.5</span> Login via Gmail</h2>
 <p>A third party user authentication is often more secure than trying to set one up by yourself. We use <a href="http://code.markedmondson.me/googleAuthR/">googleAuthR</a> package to set up a user login via Google account.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># saved in a folder google_longin_example </span>
-
-<span class="kw">library</span>(shiny)
-<span class="kw">library</span>(googleAuthR) 
-<span class="kw">library</span>(googleID)
-<span class="co"># remotes::install_github(&quot;MarkEdmondson1234/googleID&quot;) </span>
-
-<span class="co"># Google login authentication: -----------------------</span>
-<span class="co"># for the first time, set up your CLIENT_ID  and CLIENT_SECRET </span>
-<span class="co"># https://console.developers.google.com/apis</span>
-
-<span class="kw">options</span>(<span class="st">&quot;googleAuthR.webapp.client_id&quot;</span> =<span class="st"> </span>CLIENT_ID)
-<span class="kw">options</span>(<span class="st">&quot;googleAuthR.webapp.client_secret&quot;</span> =<span class="st"> </span>CLIENT_SECRET)
-<span class="kw">options</span>(<span class="st">&quot;googleAuthR.scopes.selected&quot;</span> =
-<span class="st">          </span><span class="kw">c</span>(<span class="st">&quot;https://www.googleapis.com/auth/userinfo.email&quot;</span>,
-            <span class="st">&quot;https://www.googleapis.com/auth/userinfo.profile&quot;</span>))
-ems &lt;-<span class="st"> </span><span class="cf">function</span>(txt) <span class="kw">em</span>(<span class="kw">strong</span>(txt)) 
-
-ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(
-  <span class="kw">googleAuthUI</span>(<span class="st">&quot;loginButton&quot;</span>),
-  <span class="kw">uiOutput</span>(<span class="st">&quot;user_info&quot;</span>)
-)
-
-server &lt;-<span class="st"> </span>
-<span class="st">  </span><span class="cf">function</span>(input, output, session){
-  
-  user_session &lt;-<span class="st"> </span><span class="kw">reactiveValues</span>()
-
-  ## Create access token and render login button
-  access_token &lt;-<span class="st"> </span>
-<span class="st">    </span><span class="kw">callModule</span>(googleAuth, 
-               <span class="st">&quot;loginButton&quot;</span>, 
-               <span class="dt">login_text =</span>  
-                 <span class="kw">HTML</span>(<span class="st">&#39;&lt;i class=&quot;fa fa-google fa-1x&quot;&gt;&lt;/i&gt; Login with Google&#39;</span>),
-               <span class="dt">logout_class =</span> <span class="st">&quot;btn btn-primary&quot;</span>,
-               <span class="dt">approval_prompt =</span> <span class="st">&quot;force&quot;</span>)
-  
-  jsResetCode &lt;-<span class="st"> &quot;shinyjs.reset = function() {history.go(0)}&quot;</span>
-  output<span class="op">$</span>fetch_func &lt;-<span class="st"> </span><span class="kw">gar_api_generator</span>(<span class="st">&quot;https://www.googleapis.com/urlshortener/v1&quot;</span>)
-  
-  <span class="co"># create user_session$info upon google login </span>
-  <span class="kw">observeEvent</span>(access_token, {
-    <span class="cf">if</span> (<span class="op">!</span><span class="kw">is.null</span>(<span class="kw">access_token</span>()<span class="op">$</span>credentials<span class="op">$</span>access_token)) {
-      user_session<span class="op">$</span>info  &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">with_shiny</span>(<span class="dt">f =</span> get_user_info, 
-                                       <span class="dt">shiny_access_token =</span> <span class="kw">access_token</span>()))
-    } <span class="cf">else</span> {
-      user_session<span class="op">$</span>info &lt;-<span class="st"> </span><span class="ot">NULL</span>
-    }
-  })
-  
-  <span class="co"># display user info </span>
-  output<span class="op">$</span>user_info &lt;-<span class="st"> </span><span class="kw">renderUI</span>({
-    <span class="cf">if</span> (<span class="kw">is.null</span>(user_session<span class="op">$</span>info)) <span class="kw">return</span>()
-    
-    user &lt;-<span class="st"> </span>user_session<span class="op">$</span>info
-
-    <span class="kw">div</span>(<span class="kw">HTML</span>(
-        <span class="kw">paste</span>(<span class="st">&quot;Dsiplay Name:&quot;</span>, <span class="kw">ems</span>(user<span class="op">$</span>displayName), <span class="st">&#39;&lt;br&gt;&#39;</span>,
-        <span class="st">&quot;Family Name:&quot;</span>, <span class="kw">ems</span>(user<span class="op">$</span>name.familyName), <span class="st">&#39;&lt;br&gt;&#39;</span>,
-        <span class="st">&quot;Given Name:&quot;</span>, <span class="kw">ems</span>(user<span class="op">$</span>name.givenName), <span class="st">&#39;&lt;br&gt;&#39;</span>,
-        <span class="st">&quot;Gender:&quot;</span>, <span class="kw">ems</span>(user<span class="op">$</span>gender),<span class="st">&#39;&lt;br&gt;&#39;</span>,
-        <span class="st">&quot;Organizations:&quot;</span>, <span class="kw">ems</span>(user<span class="op">$</span>organizations.name), <span class="st">&#39;&lt;br&gt;&#39;</span>,
-        <span class="st">&quot;Email Address:&quot;</span>, <span class="kw">ems</span>(user<span class="op">$</span>emails.value), <span class="st">&#39;&lt;br&gt;&#39;</span>),
-        <span class="kw">paste0</span>(<span class="st">&quot;&lt;img src= &#39;&quot;</span>, <span class="kw">gsub</span>(<span class="st">&#39;?sz=50&#39;</span>,<span class="st">&#39;&#39;</span>,user<span class="op">$</span>image.url[<span class="dv">1</span>]),
-               <span class="st">&quot;&#39; width=&#39;100&#39; height=&#39;100&#39;&gt;&quot;</span>)
-      )) 
-    })
-
-}</code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="co"># saved in a folder google_longin_example </span></a>
+<a class="sourceLine" id="cb14-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb14-3" data-line-number="3"><span class="kw">library</span>(shiny)</a>
+<a class="sourceLine" id="cb14-4" data-line-number="4"><span class="kw">library</span>(googleAuthR) </a>
+<a class="sourceLine" id="cb14-5" data-line-number="5"><span class="kw">library</span>(googleID)</a>
+<a class="sourceLine" id="cb14-6" data-line-number="6"><span class="co"># remotes::install_github(&quot;MarkEdmondson1234/googleID&quot;) </span></a>
+<a class="sourceLine" id="cb14-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb14-8" data-line-number="8"><span class="co"># Google login authentication: -----------------------</span></a>
+<a class="sourceLine" id="cb14-9" data-line-number="9"><span class="co"># for the first time, set up your CLIENT_ID  and CLIENT_SECRET </span></a>
+<a class="sourceLine" id="cb14-10" data-line-number="10"><span class="co"># https://console.developers.google.com/apis</span></a>
+<a class="sourceLine" id="cb14-11" data-line-number="11"></a>
+<a class="sourceLine" id="cb14-12" data-line-number="12"><span class="kw">options</span>(<span class="st">&quot;googleAuthR.webapp.client_id&quot;</span> =<span class="st"> </span>CLIENT_ID)</a>
+<a class="sourceLine" id="cb14-13" data-line-number="13"><span class="kw">options</span>(<span class="st">&quot;googleAuthR.webapp.client_secret&quot;</span> =<span class="st"> </span>CLIENT_SECRET)</a>
+<a class="sourceLine" id="cb14-14" data-line-number="14"><span class="kw">options</span>(<span class="st">&quot;googleAuthR.scopes.selected&quot;</span> =</a>
+<a class="sourceLine" id="cb14-15" data-line-number="15"><span class="st">          </span><span class="kw">c</span>(<span class="st">&quot;https://www.googleapis.com/auth/userinfo.email&quot;</span>,</a>
+<a class="sourceLine" id="cb14-16" data-line-number="16">            <span class="st">&quot;https://www.googleapis.com/auth/userinfo.profile&quot;</span>))</a>
+<a class="sourceLine" id="cb14-17" data-line-number="17">ems &lt;-<span class="st"> </span><span class="cf">function</span>(txt) <span class="kw">em</span>(<span class="kw">strong</span>(txt)) </a>
+<a class="sourceLine" id="cb14-18" data-line-number="18"></a>
+<a class="sourceLine" id="cb14-19" data-line-number="19">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb14-20" data-line-number="20">  <span class="kw">googleAuthUI</span>(<span class="st">&quot;loginButton&quot;</span>),</a>
+<a class="sourceLine" id="cb14-21" data-line-number="21">  <span class="kw">uiOutput</span>(<span class="st">&quot;user_info&quot;</span>)</a>
+<a class="sourceLine" id="cb14-22" data-line-number="22">)</a>
+<a class="sourceLine" id="cb14-23" data-line-number="23"></a>
+<a class="sourceLine" id="cb14-24" data-line-number="24">server &lt;-<span class="st"> </span></a>
+<a class="sourceLine" id="cb14-25" data-line-number="25"><span class="st">  </span><span class="cf">function</span>(input, output, session){</a>
+<a class="sourceLine" id="cb14-26" data-line-number="26">  </a>
+<a class="sourceLine" id="cb14-27" data-line-number="27">  user_session &lt;-<span class="st"> </span><span class="kw">reactiveValues</span>()</a>
+<a class="sourceLine" id="cb14-28" data-line-number="28"></a>
+<a class="sourceLine" id="cb14-29" data-line-number="29">  ## Create access token and render login button</a>
+<a class="sourceLine" id="cb14-30" data-line-number="30">  access_token &lt;-<span class="st"> </span></a>
+<a class="sourceLine" id="cb14-31" data-line-number="31"><span class="st">    </span><span class="kw">callModule</span>(googleAuth, </a>
+<a class="sourceLine" id="cb14-32" data-line-number="32">               <span class="st">&quot;loginButton&quot;</span>, </a>
+<a class="sourceLine" id="cb14-33" data-line-number="33">               <span class="dt">login_text =</span>  </a>
+<a class="sourceLine" id="cb14-34" data-line-number="34">                 <span class="kw">HTML</span>(<span class="st">&#39;&lt;i class=&quot;fa fa-google fa-1x&quot;&gt;&lt;/i&gt; Login with Google&#39;</span>),</a>
+<a class="sourceLine" id="cb14-35" data-line-number="35">               <span class="dt">logout_class =</span> <span class="st">&quot;btn btn-primary&quot;</span>,</a>
+<a class="sourceLine" id="cb14-36" data-line-number="36">               <span class="dt">approval_prompt =</span> <span class="st">&quot;force&quot;</span>)</a>
+<a class="sourceLine" id="cb14-37" data-line-number="37">  </a>
+<a class="sourceLine" id="cb14-38" data-line-number="38">  jsResetCode &lt;-<span class="st"> &quot;shinyjs.reset = function() {history.go(0)}&quot;</span></a>
+<a class="sourceLine" id="cb14-39" data-line-number="39">  output<span class="op">$</span>fetch_func &lt;-<span class="st"> </span><span class="kw">gar_api_generator</span>(<span class="st">&quot;https://www.googleapis.com/urlshortener/v1&quot;</span>)</a>
+<a class="sourceLine" id="cb14-40" data-line-number="40">  </a>
+<a class="sourceLine" id="cb14-41" data-line-number="41">  <span class="co"># create user_session$info upon google login </span></a>
+<a class="sourceLine" id="cb14-42" data-line-number="42">  <span class="kw">observeEvent</span>(access_token, {</a>
+<a class="sourceLine" id="cb14-43" data-line-number="43">    <span class="cf">if</span> (<span class="op">!</span><span class="kw">is.null</span>(<span class="kw">access_token</span>()<span class="op">$</span>credentials<span class="op">$</span>access_token)) {</a>
+<a class="sourceLine" id="cb14-44" data-line-number="44">      user_session<span class="op">$</span>info  &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">with_shiny</span>(<span class="dt">f =</span> get_user_info, </a>
+<a class="sourceLine" id="cb14-45" data-line-number="45">                                       <span class="dt">shiny_access_token =</span> <span class="kw">access_token</span>()))</a>
+<a class="sourceLine" id="cb14-46" data-line-number="46">    } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb14-47" data-line-number="47">      user_session<span class="op">$</span>info &lt;-<span class="st"> </span><span class="ot">NULL</span></a>
+<a class="sourceLine" id="cb14-48" data-line-number="48">    }</a>
+<a class="sourceLine" id="cb14-49" data-line-number="49">  })</a>
+<a class="sourceLine" id="cb14-50" data-line-number="50">  </a>
+<a class="sourceLine" id="cb14-51" data-line-number="51">  <span class="co"># display user info </span></a>
+<a class="sourceLine" id="cb14-52" data-line-number="52">  output<span class="op">$</span>user_info &lt;-<span class="st"> </span><span class="kw">renderUI</span>({</a>
+<a class="sourceLine" id="cb14-53" data-line-number="53">    <span class="cf">if</span> (<span class="kw">is.null</span>(user_session<span class="op">$</span>info)) <span class="kw">return</span>()</a>
+<a class="sourceLine" id="cb14-54" data-line-number="54">    </a>
+<a class="sourceLine" id="cb14-55" data-line-number="55">    user &lt;-<span class="st"> </span>user_session<span class="op">$</span>info</a>
+<a class="sourceLine" id="cb14-56" data-line-number="56"></a>
+<a class="sourceLine" id="cb14-57" data-line-number="57">    <span class="kw">div</span>(<span class="kw">HTML</span>(</a>
+<a class="sourceLine" id="cb14-58" data-line-number="58">        <span class="kw">paste</span>(<span class="st">&quot;Dsiplay Name:&quot;</span>, <span class="kw">ems</span>(user<span class="op">$</span>displayName), <span class="st">&#39;&lt;br&gt;&#39;</span>,</a>
+<a class="sourceLine" id="cb14-59" data-line-number="59">        <span class="st">&quot;Family Name:&quot;</span>, <span class="kw">ems</span>(user<span class="op">$</span>name.familyName), <span class="st">&#39;&lt;br&gt;&#39;</span>,</a>
+<a class="sourceLine" id="cb14-60" data-line-number="60">        <span class="st">&quot;Given Name:&quot;</span>, <span class="kw">ems</span>(user<span class="op">$</span>name.givenName), <span class="st">&#39;&lt;br&gt;&#39;</span>,</a>
+<a class="sourceLine" id="cb14-61" data-line-number="61">        <span class="st">&quot;Gender:&quot;</span>, <span class="kw">ems</span>(user<span class="op">$</span>gender),<span class="st">&#39;&lt;br&gt;&#39;</span>,</a>
+<a class="sourceLine" id="cb14-62" data-line-number="62">        <span class="st">&quot;Organizations:&quot;</span>, <span class="kw">ems</span>(user<span class="op">$</span>organizations.name), <span class="st">&#39;&lt;br&gt;&#39;</span>,</a>
+<a class="sourceLine" id="cb14-63" data-line-number="63">        <span class="st">&quot;Email Address:&quot;</span>, <span class="kw">ems</span>(user<span class="op">$</span>emails.value), <span class="st">&#39;&lt;br&gt;&#39;</span>),</a>
+<a class="sourceLine" id="cb14-64" data-line-number="64">        <span class="kw">paste0</span>(<span class="st">&quot;&lt;img src= &#39;&quot;</span>, <span class="kw">gsub</span>(<span class="st">&#39;?sz=50&#39;</span>,<span class="st">&#39;&#39;</span>,user<span class="op">$</span>image.url[<span class="dv">1</span>]),</a>
+<a class="sourceLine" id="cb14-65" data-line-number="65">               <span class="st">&quot;&#39; width=&#39;100&#39; height=&#39;100&#39;&gt;&quot;</span>)</a>
+<a class="sourceLine" id="cb14-66" data-line-number="66">      )) </a>
+<a class="sourceLine" id="cb14-67" data-line-number="67">    })</a>
+<a class="sourceLine" id="cb14-68" data-line-number="68"></a>
+<a class="sourceLine" id="cb14-69" data-line-number="69">}</a></code></pre></div>
 <p><a href="https://kotamine.shinyapps.io/google_login_example/">Live app is here</a></p>
 <p>THERE IS A TECHNICAL ISSUE AT THE MOMENT.</p>
 <!--- John, could you fix the "disconnect" issue ?  -->
 <p>Here is a screen shot;</p>
-<div class="figure">
-<img src="img/google_login_example.png" />
-
-</div>
+<p><img src="img/google_login_example.png" /></p>
 <p><a href="http://code.markedmondson.me/googleAuthR/articles/google-authentication-types.html#setting-the-client-via-google-cloud-client-json">Learn more about authentication options</a></p>
 </div>
 <div id="cloud-database-via-mongodb" class="section level2">
 <h2><span class="header-section-number">4.6</span> Cloud database via MongoDB</h2>
 <p>Along with user authentication, we often find it useful to store user-provided values in a database. If you are hosting a Shiny app in Shinyapps.io, one way to do this is to connect to a cloud database. Here is an example using <a href="https://mlab.com">mLab’s database</a> via <a href="https://jeroen.github.io/mongolite/">mongolite</a> package.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(mongolite)
-
-<span class="co"># set up database and database user at mlab.com </span>
-host &lt;-<span class="st"> &quot;ds139920.mlab.com:39920&quot;</span> 
-username &lt;-<span class="st"> &quot;user2018&quot;</span>
-password &lt;-<span class="st"> &quot;user2018&quot;</span>
-db &lt;-<span class="st"> &quot;mlab_example&quot;</span>
-
-url &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;mongodb://&quot;</span>,username,<span class="st">&quot;:&quot;</span>,password,<span class="st">&quot;@&quot;</span>, host, <span class="st">&quot;/&quot;</span>,db)
-
-<span class="co"># connect to mlab&#39;s database </span>
-mdb_users &lt;-<span class="st"> </span><span class="kw">mongo</span>(<span class="dt">collection=</span><span class="st">&quot;users&quot;</span>, <span class="dt">db=</span>db, <span class="dt">url =</span> url)
-mdb_usage &lt;-<span class="st">  </span><span class="kw">mongo</span>(<span class="dt">collection=</span><span class="st">&quot;usage&quot;</span>, <span class="dt">db=</span>db, <span class="dt">url =</span> url)
-
-<span class="co"># example of mongo query</span>
-usage &lt;-<span class="st"> </span>mdb_usage<span class="op">$</span><span class="kw">find</span>(<span class="st">&quot;{}&quot;</span>)
-<span class="kw">nrow</span>(usage)</code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1"><span class="kw">library</span>(mongolite)</a>
+<a class="sourceLine" id="cb15-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb15-3" data-line-number="3"><span class="co"># set up database and database user at mlab.com </span></a>
+<a class="sourceLine" id="cb15-4" data-line-number="4">host &lt;-<span class="st"> &quot;ds139920.mlab.com:39920&quot;</span> </a>
+<a class="sourceLine" id="cb15-5" data-line-number="5">username &lt;-<span class="st"> &quot;user2018&quot;</span></a>
+<a class="sourceLine" id="cb15-6" data-line-number="6">password &lt;-<span class="st"> &quot;user2018&quot;</span></a>
+<a class="sourceLine" id="cb15-7" data-line-number="7">db &lt;-<span class="st"> &quot;mlab_example&quot;</span></a>
+<a class="sourceLine" id="cb15-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb15-9" data-line-number="9">url &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;mongodb://&quot;</span>,username,<span class="st">&quot;:&quot;</span>,password,<span class="st">&quot;@&quot;</span>, host, <span class="st">&quot;/&quot;</span>,db)</a>
+<a class="sourceLine" id="cb15-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb15-11" data-line-number="11"><span class="co"># connect to mlab&#39;s database </span></a>
+<a class="sourceLine" id="cb15-12" data-line-number="12">mdb_users &lt;-<span class="st"> </span><span class="kw">mongo</span>(<span class="dt">collection=</span><span class="st">&quot;users&quot;</span>, <span class="dt">db=</span>db, <span class="dt">url =</span> url)</a>
+<a class="sourceLine" id="cb15-13" data-line-number="13">mdb_usage &lt;-<span class="st">  </span><span class="kw">mongo</span>(<span class="dt">collection=</span><span class="st">&quot;usage&quot;</span>, <span class="dt">db=</span>db, <span class="dt">url =</span> url)</a>
+<a class="sourceLine" id="cb15-14" data-line-number="14"></a>
+<a class="sourceLine" id="cb15-15" data-line-number="15"><span class="co"># example of mongo query</span></a>
+<a class="sourceLine" id="cb15-16" data-line-number="16">usage &lt;-<span class="st"> </span>mdb_usage<span class="op">$</span><span class="kw">find</span>(<span class="st">&quot;{}&quot;</span>)</a>
+<a class="sourceLine" id="cb15-17" data-line-number="17"><span class="kw">nrow</span>(usage)</a></code></pre></div>
 <p><a href="https://kotamine.shinyapps.io/mongoDB_example/">Live app is here</a></p>
-<p>Here is a screen shot; <img src="img/mongodb_example.png" /></p>
+<p>Here is a screen shot;
+<img src="img/mongodb_example.png" /></p>
 </div>
 <div id="google-analytics" class="section level2">
 <h2><span class="header-section-number">4.7</span> Google Analytics</h2>
 <p>It is easy to add a usage tracking system via Google Analytics.</p>
 <p>RStuido’s instructions: <a href="https://shiny.rstudio.com/articles/google-analytics.html">here</a> and <a href="https://shiny.rstudio.com/articles/usage-metrics.html">here</a>.</p>
 <p>To get started, here are the two steps;</p>
-<div class="figure">
-<img src="img/google_analytics_setup.png" />
-
-</div>
+<p><img src="img/google_analytics_setup.png" /></p>
 <p><a href="http://douglas-watson.github.io/post/2018-02_shiny_google_analytics/">source</a></p>
 <p>An example is provided in <code>minimum_example1.R</code> file.</p>
 <p>Note: when specifying your URL in Google Analytics, be sure to choose correctly “http” or “https”.</p>
@@ -386,7 +408,8 @@ usage &lt;-<span class="st"> </span>mdb_usage<span class="op">$</span><span clas
 <div id="custom-layout-colors-and-html-modifications" class="section level2">
 <h2><span class="header-section-number">4.8</span> Custom Layout, Colors, and HTML modifications</h2>
 <p>To an extent, one can choose from various layouts, themes, and color palette options to customize the visual effects of a shiny application and make the application more accessible from mobile phones etc. While customization is beyond the scope of this tutorial, here are the basics;</p>
-<p>Here is a screen shot; <img src="img/CSS_example.png" /></p>
+<p>Here is a screen shot;
+<img src="img/CSS_example.png" /></p>
 <p>For more advanced customization, feel free to contact us. Our programmer may have a quick tip or may be hired for a short-term contract.</p>
 </div>
 </div>
@@ -462,7 +485,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
+    var src = "true";
     if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
