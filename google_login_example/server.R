@@ -4,13 +4,14 @@
     
     user_session <- reactiveValues()
     
-    ## Create access token and render login button
+    # Create access token and render login button
     access_token <- callModule(googleAuth, 
                                "loginButton", 
                                login_text =  HTML('<i class="fa fa-google fa-1x"></i> Login with Google'),
                                logout_class = "btn btn-primary",
                                approval_prompt = "force")
     
+    # create user_session$info upon google login 
     observeEvent(access_token, {
       if (!is.null(access_token()$credentials$access_token)) {
         # browser()  # check here to see if login was successful 
